@@ -1,7 +1,7 @@
 export default function Home() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <p>sample text</p>
+    <div className="flex w-screen h-screen items-center justify-center bg-zinc-50">
+      <p>normal pages here</p>
     </div>
   );
 }

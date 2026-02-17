@@ -1,5 +1,7 @@
 import localFont from "next/font/local";
+import { Metadata } from "next"
 import "./globals.css";
+import { TriangleAlert } from 'lucide-react';
 
 const ls = localFont({
   src: [
@@ -21,6 +23,10 @@ const ls = localFont({
   ],
 });
 
+export const metadata: Metadata = {
+  title: 'DekNont Live Demo'
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -31,7 +37,10 @@ export default function RootLayout({
       <body
         className={`${ls.className} antialiased`}
       >
-        <div className="sm:flex hidden w-screen h-screen items-center justify-center text-center">กรุณาใช้มือถือในการรับชม</div>
+        <div className="sm:flex flex-col gap-3 hidden w-screen h-screen items-center justify-center text-center">
+          <p className="text-red-500"><TriangleAlert /></p>
+          <p>กรุณาใช้มือถือในการรับชม</p>
+        </div>
         <div className="sm:hidden block">{children}</div>
       </body>
     </html>
