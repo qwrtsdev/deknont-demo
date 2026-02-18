@@ -29,15 +29,17 @@ export default function AIPage() {
 
             {/* Input Area */}
             <div className="border-t border-gray-300 p-4">
-                <div className="flex items-center gap-3 bg-gray-100 rounded-full px-4 py-2">
+                <div className="flex items-center gap-3">
+                    <label htmlFor="chat-input" className="sr-only">Message</label>
                     <input
+                        id="chat-input"
                         type="text"
                         placeholder="พิมพ์ข้อความ"
-                        className="flex-1 bg-transparent outline-none text-gray-700 placeholder-gray-500"
+                        className="flex-1 bg-gray-100 rounded-full px-4 py-2 outline-none text-gray-700 placeholder-gray-500"
                     />
-                    <button className="text-purple-600 hover:text-purple-700">
-                        <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                            <path d="M10.894 2.553a1 1 0 00-1.788 0l-7 14a1 1 0 001.169 1.409l5.951-1.429 5.951 1.429a1 1 0 001.169-1.409l-7-14z" />
+                    <button type="button" aria-label="Send message" className="ml-2 bg-gray-600 hover:bg-gray-700 text-white rounded-full p-2 flex items-center justify-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
+                            <path d="M15.854.146a.5.5 0 0 1 .11.54l-5.819 14.547a.75.75 0 0 1-1.329.124l-3.178-4.995L.643 7.184a.75.75 0 0 1 .124-1.33L15.314.037a.5.5 0 0 1 .54.11ZM6.636 10.07l2.761 4.338L14.13 2.576zm6.787-8.201L1.591 6.602l4.339 2.76z"/>
                         </svg>
                     </button>
                 </div>
