@@ -25,7 +25,7 @@ export default function CalendarPage() {
             {/* Header */}
             <div className="mb-8">
                 <h1 className="text-3xl font-bold text-purple-600">สวัสดี</h1>
-                <p className="text-2xl font-semibold text-gray-700">โจดี มีบูญ</p>
+                <p className="text-2xl font-semibold text-gray-700">ใจดี มีบูญ</p>
             </div>
 
             {/* Calendar Card */}
@@ -74,18 +74,18 @@ export default function CalendarPage() {
 
             {/* Upcoming Events */}
             <div className="mb-8">
-                <h3 className="text-lg font-bold text-black mb-4">ปฎิทินตั้งจรรม</h3>
+                <h3 className="text-lg font-bold text-black mb-4">ปฎิทินกิจกรรม</h3>
                 <div className="grid grid-cols-2 gap-4">
                     <div className="bg-red-400 rounded-2xl p-4 text-white">
                         <div className="text-3xl font-bold mb-2">2</div>
-                        <p className="font-semibold">วันพยดา</p>
-                        <p className="text-sm opacity-90">วันมาบูชา</p>
+                        <p className="font-semibold">วันหยุด</p>
+                        <p className="text-sm opacity-90">วันมาฆบูชา</p>
                         <p className="text-xs opacity-75">3 มีนาคม 2569</p>
                     </div>
                     <div className="bg-yellow-400 rounded-2xl p-4 text-gray-800">
                         <div className="text-3xl font-bold mb-2">19</div>
                         <p className="font-semibold">วันสำคัญ</p>
-                        <p className="text-sm opacity-90">สอยปสา</p>
+                        <p className="text-sm opacity-90">สอบปลายภาค</p>
                         <p className="text-xs opacity-75">20 มีนาคม 2569</p>
                     </div>
                 </div>
@@ -94,7 +94,7 @@ export default function CalendarPage() {
             {/* Classes Section */}
             <div>
                 <div className="flex items-center justify-between mb-4">
-                    <h3 className="text-lg font-bold">แผนเนอร์</h3>
+                    <h3 className="text-lg font-bold">แพลนเนอร์</h3>
                     <button className="p-2 hover:bg-gray-100 rounded-lg">
                         <Plus className="w-6 h-6 text-gray-600" />
                     </button>
@@ -105,8 +105,8 @@ export default function CalendarPage() {
                             <div className="w-12 h-12 bg-gray-300 rounded-lg flex-shrink-0"></div>
                             <div>
                                 <p className="font-semibold text-gray-800">{course}</p>
-                                <p className="text-xs text-gray-500">20 เมื่อ 2569 • 12:00 น.</p>
-                                <p className="text-xs text-gray-500">เก็บบันทึกเสร็จใน 19 วัน</p>
+                                <p className="text-xs text-gray-500">20 มีนาคม 2569 • 12:00 น.</p>
+                                <p className="text-xs text-gray-500">เตือนฉันอีกครั้งใน 19 วัน</p>
                             </div>
                         </div>
                     ))}
