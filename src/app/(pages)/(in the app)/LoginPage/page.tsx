@@ -24,14 +24,7 @@ export default function LoginPage() {
             </div>
 
             <form onSubmit={handleLogin} className="w-full max-w-sm space-y-4">
-                <input
-                    type="email"
-                    placeholder="เข้าสู่ระบบโดยใช้บัญชีมีกรรมการ"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                    className="w-full px-6 py-4 rounded-full bg-white text-center text-gray-700 font-medium placeholder-gray-600 focus:outline-none focus:ring-2 focus:ring-purple-400"
-                />
-
+                <div className="w-full px-6 py-4 rounded-full bg-white text-center text-gray-700 font-medium placeholder-gray-600 focus:outline-none focus:ring-2 focus:ring-purple-400">เข้าสู่ระบบในฐานะนักเรียน</div>
                 <div className="text-center">
                     <button
                         type="button"
@@ -40,27 +33,20 @@ export default function LoginPage() {
                         หรือ
                     </button>
                 </div>
-
-                <input
-                    type="password"
-                    placeholder="เข้าสู่ระบบในฐานะผู้ปกครอง"
-                    value={password}
-                    onChange={(e) => setPassword(e.target.value)}
-                    className="w-full px-6 py-4 rounded-full bg-black text-center text-white font-medium placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-400"
-                />
+                <div className="w-full px-6 py-4 rounded-full bg-black text-center text-white font-medium placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-400">เข้าสู่ระบบในฐานะผู้ปกครอง</div>
             </form>
 
             <div className="mt-8 text-center text-xs text-purple-800 max-w-sm">
                 <p>
-                    เบื้องต้นใช้งานเนื้อหลักอื่นที่ มีอำนาจ
+                    เมื่อคุณใช้งานแอปพลิเคชันนี้ ถือว่าคุณ
                     <Link href="#" className="underline hover:text-purple-900">
-                        ส่วนการสอนเพิ่มเติม
+                        ยอมรับข้อกำหนด และเงื่อนไขการใช้งาน
                     </Link>
                 </p>
                 <p className="mt-2">
-                    และเรื่องภาครัฐอื่น
+                    และ
                     <Link href="#" className="underline hover:text-purple-900">
-                        และประเมินความเพียงค่อน
+                        นโยบายความเป็นส่วนตัว
                     </Link>
                 </p>
             </div>
