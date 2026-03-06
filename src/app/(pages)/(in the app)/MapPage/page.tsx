@@ -14,22 +14,22 @@ export default function MapPage() {
         },
         {
             id: 2,
-            name: 'โรงเรียนปันนวัฒษ',
+            name: 'โรงเรียนปัณณวิชญ์',
             icon: '🏫',
         },
         {
             id: 3,
-            name: 'โรงเรียนสวนหลวงวิทยาลัย นนทบุรี',
+            name: 'โรงเรียนสวนกุหลาบวิทยาลัย นนทบุรี',
             icon: '🏫',
         },
         {
             id: 4,
-            name: 'โรงเรียนอนุสรณ์โครงการเสด',
+            name: 'โรงเรียนนนทบุรีวิทยาลัย',
             icon: '🏫',
         },
     ];
 
-    const filterOptions = ['บริษัทกีฬา', 'ประณมศึกษา', 'อุมนศา', 'เบิร์สเอธร', 'อื่นๆ'];
+    const filterOptions = ['มัธยมศึกษา', 'ประถมศึกษา', 'อนุบาล', 'เนอสเซอรี่', 'อื่นๆ'];
 
     const [panelOpen, setPanelOpen] = useState(true);
 
@@ -54,7 +54,7 @@ export default function MapPage() {
                 <div className="flex flex-col h-full">
                     <div className="flex flex-col items-center gap-2 p-3">
                         <button
-                            className="h-1.5 w-12 rounded-full bg-gray-300"
+                            className="h-1.5 w-12 rounded-full bg-gray-300 mt-1 mb-2"
                             onClick={() => setPanelOpen((open) => !open)}
                             aria-label={panelOpen ? 'ปิดเมนู' : 'เปิดเมนู'}
                         />
@@ -79,7 +79,7 @@ export default function MapPage() {
 
                         {/* Filter Chips */}
                         <div className="flex gap-2 overflow-x-auto pb-4">
-                            {['บริษัทกีฬา', 'ประณมศึกษา'].map((filter) => (
+                            {['มัธยมศึกษา', 'ประถมศึกษา'].map((filter) => (
                                 <button
                                     key={filter}
                                     className="flex items-center gap-1 px-4 py-2 bg-blue-600 text-white rounded-full text-sm font-medium whitespace-nowrap hover:bg-blue-700"
