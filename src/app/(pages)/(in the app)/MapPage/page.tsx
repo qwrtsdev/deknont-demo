@@ -35,6 +35,14 @@ export default function MapPage() {
 
     return (
         <div className="relative h-screen w-screen bg-gray-50">
+            {/* Top header */}
+            <header className="absolute inset-x-0 top-0 z-20 flex items-center justify-between px-4 py-3 bg-indigo-600/90 backdrop-blur text-white">
+                <h1 className="text-lg font-semibold">แผนที่</h1>
+                <button className="rounded-full bg-white/20 p-2 hover:bg-white/30">
+                    <Users className="h-5 w-5" />
+                </button>
+            </header>
+
             {/* Fullscreen map */}
             <iframe
                 className="absolute inset-0 w-full h-full"
