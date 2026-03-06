@@ -61,6 +61,15 @@ export default function NewPlannerPage() {
                     </div>
                 </div>
 
+                {/* Location */}
+                <div className="space-y-2">
+                    <input
+                        type="text"
+                        placeholder="สถานที่"
+                        className="w-full bg-gray-100 text-gray-600 px-4 py-3 rounded-lg focus:outline-none"
+                    />
+                </div>
+
                 {/* Description */}
                 <textarea
                     placeholder="รายละเอียดเพิ่มเติม"
