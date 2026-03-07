@@ -1,6 +1,10 @@
-export default function Home() {
-  return (
-    <div className="flex w-screen h-screen items-center justify-center bg-zinc-50">
-    </div>
-  );
+'use client';
+import NavBar from '@/components/NavBar';
+
+export default function TutorPage() {
+    return (
+        <div className="min-h-screen bg-white pb-28">
+            <NavBar />
+        </div>
+    );
 }

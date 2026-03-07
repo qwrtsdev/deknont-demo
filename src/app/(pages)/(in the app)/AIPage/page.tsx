@@ -1,10 +1,12 @@
+'use client';
 import React from 'react';
+import NavBar from '@/components/NavBar';
 
 export default function AIPage() {
     return (
-        <div className="flex flex-col h-screen bg-gray-50">
+        <div className="flex flex-col h-screen bg-gray-50 pb-28">
             {/* Header */}
-            <div className="bg-gradient-to-r from-purple-600 to-purple-700 text-white px-6 py-4">
+            <div className="text-white px-6 py-4" style={{ backgroundColor: '#8E05EC' }}>
                 <h1 className="text-2xl font-bold">NontAI</h1>
             </div>
 
@@ -44,6 +46,7 @@ export default function AIPage() {
                     </button>
                 </div>
             </div>
+            <NavBar />
         </div>
     );
 }

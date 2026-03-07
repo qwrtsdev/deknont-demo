@@ -33,9 +33,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body
         className={`${ls.className} antialiased`}
+        suppressHydrationWarning
       >
         <div className="sm:flex flex-col gap-3 hidden w-screen h-screen items-center justify-center text-center">
           <p className="text-red-500"><TriangleAlert /></p>

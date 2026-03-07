@@ -1,16 +1,7 @@
-'use client';
-import { useState } from 'react';
 import Link from 'next/link';
 
 
 export default function LoginPage() {
-    const [email, setEmail] = useState('');
-    const [password, setPassword] = useState('');
-
-    const handleLogin = (e: React.FormEvent) => {
-        e.preventDefault();
-        // Handle login logic
-    };
 
     return (
         <div className="flex flex-col items-center justify-center min-h-screen bg-gradient-to-b from-purple-200 to-purple-500 px-6">
@@ -23,8 +14,8 @@ export default function LoginPage() {
                 </p>
             </div>
 
-            <form onSubmit={handleLogin} className="w-full max-w-sm space-y-4">
-                <div className="w-full px-6 py-4 rounded-xl bg-white text-center text-gray-700 font-medium placeholder-gray-600 focus:outline-none focus:ring-2 focus:ring-purple-400">เข้าสู่ระบบในฐานะนักเรียน</div>
+            <div className="w-full max-w-sm space-y-4">
+                <Link href="/CalendarPage" className="block w-full px-6 py-4 rounded-xl bg-white text-center text-gray-700 font-medium focus:outline-none focus:ring-2 focus:ring-purple-400">เข้าสู่ระบบในฐานะนักเรียน</Link>
                 <div className="text-center">
                     <button
                         type="button"
@@ -33,8 +24,8 @@ export default function LoginPage() {
                         หรือ
                     </button>
                 </div>
-                <div className="w-full px-6 py-4 rounded-xl bg-black text-center text-white font-medium placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-400">เข้าสู่ระบบในฐานะผู้ปกครอง</div>
-            </form>
+                <Link href="/ParentPage" className="block w-full px-6 py-4 rounded-xl bg-black text-center text-white font-medium focus:outline-none focus:ring-2 focus:ring-purple-400">เข้าสู่ระบบในฐานะผู้ปกครอง</Link>
+            </div>
 
             <div className="mt-8 text-center text-xs text-purple-800 max-w-sm">
                 <p>

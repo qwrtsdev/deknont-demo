@@ -1,10 +1,13 @@
 'use client';
-import { useState } from 'react';
+import { useState, useMemo } from 'react';
 import { ChevronLeft, ChevronRight, Plus } from 'lucide-react';
+import { useRouter } from 'next/navigation';
+import NavBar from '@/components/NavBar';
 
 
 export default function CalendarPage() {
-    const [currentDate, setCurrentDate] = useState(new Date(2026, 2, 1));
+    const router = useRouter();
+    const [currentDate] = useState<Date>(() => new Date(2026, 2, 1));
 
     const getDaysInMonth = (date: Date) => {
         return new Date(date.getFullYear(), date.getMonth() + 1, 0).getDate();
@@ -14,14 +17,19 @@ export default function CalendarPage() {
         return new Date(date.getFullYear(), date.getMonth(), 1).getDay();
     };
 
-    const monthName = currentDate.toLocaleDateString('th-TH', { month: 'long', year: 'numeric' });
+    // Safe: entire component is 'use client', so this only runs in the browser
+    const monthName = useMemo(
+        () => currentDate.toLocaleDateString('th-TH', { month: 'long', year: 'numeric' }),
+        [currentDate]
+    );
+
     const daysInMonth = getDaysInMonth(currentDate);
     const firstDay = getFirstDayOfMonth(currentDate);
     const days = Array.from({ length: daysInMonth }, (_, i) => i + 1);
     const emptyDays = Array.from({ length: firstDay }, () => null);
 
     return (
-        <div className="min-h-screen bg-white p-6">
+        <div className="min-h-screen bg-white p-6 pb-28">
             {/* Header */}
             <div className="mb-8">
                 <h1 className="text-3xl font-bold text-purple-600">สวัสดี</h1>
@@ -95,7 +103,7 @@ export default function CalendarPage() {
             <div>
                 <div className="flex items-center justify-between mb-4">
                     <h3 className="text-lg font-bold">แพลนเนอร์</h3>
-                    <button className="p-2 hover:bg-gray-100 rounded-lg">
+                    <button className="p-2 hover:bg-gray-100 rounded-lg" onClick={() => router.push('/NewPlannerPage')}>
                         <Plus className="w-6 h-6 text-gray-600" />
                     </button>
                 </div>
@@ -112,6 +120,7 @@ export default function CalendarPage() {
                     ))}
                 </div>
             </div>
+            <NavBar />
         </div>
     );
 }
