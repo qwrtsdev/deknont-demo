@@ -31,13 +31,11 @@ export default function LearningPage() {
     return (
         <div className="min-h-screen bg-white pb-28">
             {/* Header */}
-            <div className="px-5 pt-12 pb-6" style={{ backgroundColor: '#8E05EC' }}>
-                <div className="flex items-center justify-between">
-                    <h1 className="text-2xl font-bold text-white">เรียนรู้</h1>
-                    <button className="w-9 h-9 rounded-full bg-white/20 flex items-center justify-center">
-                        <UserRound className="w-5 h-5 text-white" />
-                    </button>
-                </div>
+            <div className="flex items-center justify-between px-4 py-3 text-white" style={{ backgroundColor: '#8E05EC' }}>
+                <h1 className="text-lg font-semibold">เรียนรู้</h1>
+                <button className="rounded-full bg-white/20 p-2 hover:bg-white/30">
+                    <UserRound className="h-5 w-5" />
+                </button>
             </div>
 
             {/* Focus Mode Button */}

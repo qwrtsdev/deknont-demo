@@ -1,6 +1,6 @@
 'use client';
 import { useState, useMemo } from 'react';
-import { ChevronLeft, ChevronRight, Plus } from 'lucide-react';
+import { ChevronLeft, ChevronRight, Plus, UserRound } from 'lucide-react';
 import { useRouter } from 'next/navigation';
 import NavBar from '@/components/NavBar';
 
@@ -29,15 +29,17 @@ export default function CalendarPage() {
     const emptyDays = Array.from({ length: firstDay }, () => null);
 
     return (
-        <div className="min-h-screen bg-white p-6 pb-28">
+        <div className="min-h-screen bg-white pb-28">
             {/* Header */}
-            <div className="mb-8">
-                <h1 className="text-3xl font-bold text-purple-600">สวัสดี</h1>
-                <p className="text-2xl font-semibold text-gray-700">ใจดี มีบูญ</p>
+            <div className="flex items-center justify-between px-4 py-3 text-white" style={{ backgroundColor: '#8E05EC' }}>
+                <h1 className="text-lg font-semibold">ปฏิทิน</h1>
+                <button className="rounded-full bg-white/20 p-2 hover:bg-white/30">
+                    <UserRound className="h-5 w-5" />
+                </button>
             </div>
 
             {/* Calendar Card */}
-            <div className="bg-white rounded-lg shadow-md p-6 mb-8">
+            <div className="mx-4 mt-4 bg-white rounded-lg shadow-md p-6 mb-8">
                 <div className="flex items-center justify-between mb-6">
                     <h2 className="text-xl font-semibold">
                         {monthName}
@@ -81,7 +83,7 @@ export default function CalendarPage() {
             </div>
 
             {/* Upcoming Events */}
-            <div className="mb-8">
+            <div className="px-4 mb-8">
                 <h3 className="text-lg font-bold text-black mb-4">ปฎิทินกิจกรรม</h3>
                 <div className="grid grid-cols-2 gap-4">
                     <div className="bg-red-400 rounded-2xl p-4 text-white">
@@ -100,7 +102,7 @@ export default function CalendarPage() {
             </div>
 
             {/* Classes Section */}
-            <div>
+            <div className="px-4">
                 <div className="flex items-center justify-between mb-4">
                     <h3 className="text-lg font-bold">แพลนเนอร์</h3>
                     <button className="p-2 hover:bg-gray-100 rounded-lg" onClick={() => router.push('/NewPlannerPage')}>

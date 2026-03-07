@@ -1,4 +1,6 @@
-'use client';
+import { writeFileSync } from "fs";
+
+const content = `'use client';
 import { useState } from 'react';
 import { Search, UserRound } from 'lucide-react';
 import NavBar from '@/components/NavBar';
@@ -70,3 +72,11 @@ export default function TutorPage() {
         </div>
     );
 }
+`;
+
+writeFileSync(
+    "src/app/(pages)/(in the app)/TutorPage/page.tsx",
+    content,
+    "utf8",
+);
+console.log("Done");

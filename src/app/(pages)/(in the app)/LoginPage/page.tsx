@@ -24,7 +24,7 @@ export default function LoginPage() {
                         หรือ
                     </button>
                 </div>
-                <Link href="/ParentPage" className="block w-full px-6 py-4 rounded-xl bg-black text-center text-white font-medium focus:outline-none focus:ring-2 focus:ring-purple-400">เข้าสู่ระบบในฐานะผู้ปกครอง</Link>
+                <Link href="/CalendarPage" className="block w-full px-6 py-4 rounded-xl bg-black text-center text-white font-medium focus:outline-none focus:ring-2 focus:ring-purple-400">เข้าสู่ระบบในฐานะผู้ปกครอง</Link>
             </div>
 
             <div className="mt-8 text-center text-xs text-purple-800 max-w-sm">

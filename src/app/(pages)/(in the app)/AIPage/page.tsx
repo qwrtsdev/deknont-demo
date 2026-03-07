@@ -1,13 +1,17 @@
 'use client';
 import React from 'react';
+import { UserRound } from 'lucide-react';
 import NavBar from '@/components/NavBar';
 
 export default function AIPage() {
     return (
         <div className="flex flex-col h-screen bg-gray-50 pb-28">
             {/* Header */}
-            <div className="text-white px-6 py-4" style={{ backgroundColor: '#8E05EC' }}>
-                <h1 className="text-2xl font-bold">NontAI</h1>
+            <div className="flex items-center justify-between px-4 py-3 text-white" style={{ backgroundColor: '#8E05EC' }}>
+                <h1 className="text-lg font-semibold">สอบถาม</h1>
+                <button className="rounded-full bg-white/20 p-2 hover:bg-white/30">
+                    <UserRound className="h-5 w-5" />
+                </button>
             </div>
 
             {/* Chat Messages Area */}

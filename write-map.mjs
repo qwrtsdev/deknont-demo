@@ -1,4 +1,6 @@
-'use client';
+import { writeFileSync } from "fs";
+
+const content = `'use client';
 import { useState } from 'react';
 import { Search, Users } from 'lucide-react';
 import { motion } from 'framer-motion';
@@ -112,3 +114,7 @@ export default function MapPage() {
         </div>
     );
 }
+`;
+
+writeFileSync("src/app/(pages)/(in the app)/MapPage/page.tsx", content, "utf8");
+console.log("Done");
